@@ -29,8 +29,8 @@ header .inner {
 }
 
 header .logo img {
-    height: 80px; /* Kurangi ukuran untuk layar kecil */
-    margin-top: 4px; /* Optical alignment */
+    height: 100px; /* Kurangi ukuran untuk layar kecil */
+    margin-top: 5px; /* Optical alignment */
 }
 
 /* Footer Styling */
