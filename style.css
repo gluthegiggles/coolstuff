@@ -4,87 +4,78 @@
 body {
     overflow: hidden;
     margin: 0;
-   
 }
 
-
-
-header{
-    width: 100vw;
-    height: 110px;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'Poppins';
-    background:rgba(0,0,0,0.5);
-    position:fixed;
-    left:0;
-    top:0;
-}
-
-header .inner{
-    width: 1300px; /* This is the inner width of the content inside of your header (80%, etc) */
-    height: 100%;
-    display: block;
-    margin: 0 auto;
-}
-
-header .logo{
-    align-items: center;
+/* Header Styling */
+header {
     width: 100%;
-    height: 50px;
-    padding-left: 470px;
-    line-height: 50px;
-    position: absolute;
-    bottom: 60px;
-}
-
-header .logo div{
-    height: 100%;
-    display: table-cell;
-    vertical-align: middle;
-}
-
-header .logo img{
     height: 110px;
-    margin-top: 4px; /* Optical alignment of the logo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    z-index: 100;
 }
-  
 
-footer{
-    background:rgba(0,0,0,0.5);
+header .inner {
+    width: 90%; /* Ubah dari 1300px ke fleksibel */
+    max-width: 1300px;
+    display: flex;
+    justify-content: center; /* Agar logo tetap di tengah */
+    align-items: center;
+}
+
+header .logo img {
+    height: 80px; /* Kurangi ukuran untuk layar kecil */
+    margin-top: 4px; /* Optical alignment */
+}
+
+/* Footer Styling */
+footer {
+    background: rgba(0, 0, 0, 0.5);
     color: #fff;
     text-align: center;
     width: 100%;
     height: 50px;
-    padding-left: 10px;
     line-height: 50px;
-    position: absolute;
-    bottom: 0px;
+    position: fixed;
+    bottom: 0;
     font-family: 'Poppins', sans-serif;
 }
-footer span a{
+
+footer span a {
     color: #FF1515;
     text-decoration: none;
-    font-family: 'Poppins', sans-serif;
 }
 
-@media only screen and (max-width: 600px){
-    .footer {
-        text-align: center;
-    width: 100%;
-    height: 50px;
-    padding-left: 10px;
-    line-height: 50px;
-    position: absolute;
-    bottom: 0px;
+/* Responsiveness for Mobile */
+@media (max-width: 768px) {
+    header {
+        height: 90px;
     }
 
-    .header{      
-    width: 100%;
-    height: 50px;
-    padding-left: 20px;
-    line-height: 50px;
-    position: absolute;
-    bottom: 60px;  
+    header .logo img {
+        height: 60px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        height: 80px;
+    }
+
+    header .logo img {
+        height: 50px;
+    }
+
+    footer {
+        font-size: 10px;
     }
 }
